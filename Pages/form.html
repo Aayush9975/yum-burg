@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <h2 id="h2">Enter The Details</h2>
+    <h3 id="h3"> Get the Call back</h3>
+    <br>
+    <div class="model-container" id="model-container">
+        <div class="modal">
+    <form id="form-id">
+        <label id="entName">Enter Your Name</label>
+        <input type="text" id="name">
+        <br><br>
+        <label>Enter Your Age</label>
+        <input type="number" id="age">
+        <br><br>
+
+        <label>Enter Your Mobile Number</label>
+        <input type="text" id="mobileNumber" maxlength="10" onkeypress="return event.charCode >=48 && event.charCode<=57">
+  <br><br>
+        <button id="submitButton" type="button" onclick="submitForm()">Submit</button>
+<p id="results"> </p>
+    </form>
+    </div></div>
+<script src="form.js"></script>
+</body>
+
+</html>
