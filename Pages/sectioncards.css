@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    min-width: 300px;
+    /* Fixed width */
+    flex: 0 0 auto;
+    /* Prevent shrinking */
+
+    background: black;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 1px 10px;
+    margin: 0;
+    /* Remove margin-left:65px */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: royalblue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkblue;
+}
+
+#sectioncards {
+    display: flex;
+    gap: 25px;
+}
+
+.cardsslider {
+
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 20px;
+    padding: 20px;
+    background: red;
+    flex-wrap: nowrap;
+    /* Important */
+    scroll-behavior: smooth;
+
+
+}
+
+.cardssliderh3 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    /* sirf niche thoda gap */
+}
+
+.special-section {
+    background: red;
+    padding: 20px;
+}

@@ -70,7 +70,7 @@ function offer() {
     document.getElementById("offer").textContent = "Buy 1 Get 1 Free";
 }
 
-let count = 1;
+let count = 0;
 function increase() {
     count++;
     document.getElementById("count").textContent = count;
@@ -78,13 +78,13 @@ function increase() {
 }
 
 function decrease() {
-    if (count > 1) {
+    if (count > 0) {
         count--;
         document.getElementById("count").textContent = count;
     }
 }
 
-let count2 = 1;
+let count2 = 0;
 function increase2() {
     count2++;
     document.getElementById("count2").textContent = count2;
@@ -92,7 +92,7 @@ function increase2() {
 }
 
 function decrease2() {
-    if (count2 > 1) {
+    if (count2 > 0) {
         count2--;
         document.getElementById("count2").textContent = count2;
     }
@@ -116,5 +116,12 @@ window.addEventListener("click", (event) => {
     }
 });
 
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert("Thanks for clicking!");
+    });
+});
 
 
