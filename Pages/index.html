@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome! to the YumBurg</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sectioncards.css">
+</head>
+
+<body bgcolor="black">
+
+
+
+    <div id="popup" class="popup">🚀 Coming Soon...</div>
+    <div id="pop" class="pop">🚀 Waiting Period</div>
+    <div id="changeColor" class="changeColor">Your Button Color is change</div>
+
+    <header class="header">
+        <div class="logo">YumBurg</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Contact</a>
+
+
+            <div class="enquiry-tab">
+                <button class="enquiry-btn" id="OpenPopupForm"
+                    onclick="window.location.href='form.html'">ENQUIRY</button>
+
+            </div>
+            <div class="profile-img">
+                <img src="../images/account.svg" alt="account-img">
+            </div>
+
+            <div class="search-img">
+                <img src="../images/search-b.svg" alt="search-btn">
+            </div>
+
+            <div id="cart">
+                <img src="../images/cart.jpg.png" alt="cart-img" onclick="window.location.href='cart.html'">
+            </div>
+
+
+
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="Hello">Hello Yummy's! Go Down and Enjoy IT!</h2>
+
+        <div class="card-wrapper">
+
+
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Cheese Burger"> yumburg-icon.jpg
+                <h2>Cheese Burger</h2>
+                <p class="price">₹149</p>
+                <a href="../Product-Pages/Cheese-Burger.html" class="btn">Press Me!</a>
+
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Chicken Shot">
+                <h2>Chicken Shot!</h2>
+                <p class="price">₹289</p>
+                <a href="#" class="btn" id="offer" onclick="offer()">Seee Offferrr!</a>
+                <button onclick="increase()">+</button>
+                <span id="count">0</span>
+                <button onclick="decrease()">-</button>
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="The Smoky Melt">
+                <h2>The Smoky Melt</h2>
+                <p class="price">₹256</p>
+                <a href="#" class="btn" onclick="comingSoon(event)">Press Me!</a>
+                <button onclick="increase2()">+</button>
+                <span id="count2">0</span>
+                <button onclick="decrease2()">-</button>
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Brown Burger">
+                <h2>Brown Burger</h2>
+                <p class="price">₹256</p>
+                <a href="#" class="btn" onclick="comingSoon(event)">Press Me!</a>
+                <!-- <button class="add-cart" onclick="">Add to Cart </button> -->
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Veg Chili">
+                <h2>Veg Chili</h2>
+                <p class="price">₹256</p>
+                <a href="#" class="btn" onclick="comingSoon(event)">Press Me!</a>
+            </div>
+
+            <div class="box">
+                <img src="../images/McDonalds-Transparent-PNG.png" alt="macd">
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Veg Fire">
+                <h2>Veg Fire!</h2>
+                <p class="price">₹256</p>
+                <a href="#" class="btn">Press Me!</a>
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Green Burg">
+                <h2>Green Burg</h2>
+                <p class="price">₹256</p>
+                <a href="#" class="btn" onclick="WaitingPeriod(event)">Press Me!</a>
+            </div>
+
+        </div>
+
+        <section class="hero-component">
+
+            <div class="maincomponent">
+                <div class="hero-text">
+                    <h1>Amazing !!</h1>
+                </div>
+
+                <div class="hero-img">
+                    <img class="himg" src="../images/McDonalds-Transparent-PNG.png" alt="macd">
+                </div>
+            </div>
+
+
+
+
+
+            <div id="5card-component" style="background-color: red; margin-top: 85px;">
+                <br>
+                <h3 class="cardssliderh3">Lets Have What Special Today is ?</h3>
+
+                <div class="cardsslider">
+
+                    <div class="card">
+                        <h2>Hot Chicken</h2>
+                        <p>Spicy</p>
+                        <button>Lets Have</button>
+                    </div><br>
+                    <div class="card">
+                        <h2>Dimsun Burger</h2>
+                        <p>Healthy Veggies</p>
+                        <button>Lets Have</button>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <h2>Sushi</h2>
+                        <p>China Great</p>
+                        <button>Lets Have</button>
+                    </div><br>
+
+                    <div class="card">
+                        <h2>Hot Spice</h2>
+                        <p>Some Different</p>
+                        <button>Lets Have</button>
+                    </div><br>
+
+                    <div class="card">
+                        <h2>Kong-Hong</h2>
+                        <p>Hong Kong Opposite</p>
+                        <button>Lets Have</button>
+                    </div><br>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

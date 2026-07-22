@@ -1,0 +1,513 @@
+/* Body */
+body {
+    font-family: cursive;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+/* Header and Footer */
+header,
+footer {
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 8px;
+    bottom: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+}
+
+/* Nav Links */
+.nav a {
+    text-align: right;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.nav a:hover {
+    color: black;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Cards */
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.burger-card {
+    width: 260px;
+    background: #fff;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.burger-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.burger-card h2 {
+    margin: 12px 0 5px;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: red;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+/* Hello Text */
+.Hello {
+    background-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: red;
+    text-align: center;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+/* Rotating Text */
+.rotatetxt {
+    font-family: cursive;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 14s linear infinite;
+    width: 600px;
+    height: 40px;
+    text-align: center;
+}
+
+/* @keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+} */
+
+/* Responsive Logo & Cards */
+@media (max-width: 768px) {
+    .card-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.popup {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: bottom 0.5s ease;
+    z-index: 1000;
+}
+
+/* Active animation */
+.popup.show {
+    bottom: 50px;
+}
+
+.coming-soon-section {
+
+    background-color: white;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+
+}
+
+.coming-soon-image {
+    width: 100%;
+    height: auto;
+    /* display: block; */
+    display: flex;
+    border-style: dashed;
+    border-color: blueviolet
+}
+
+.coming-soon-text {
+    color: black;
+    justify-content: center;
+    display: flex;
+    border-style: solid;
+    border-color: red;
+
+}
+
+.container {
+    display: flex;
+    /* align-items: center; */
+    gap: 20px;
+    /* justify-content: center; */
+    background-color: white;
+    margin-top: 20px;
+}
+
+.coming-soon {
+    /* border:2px dashed purple ;padding:10px; */
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: left;
+    margin-left: 245px;
+}
+
+.red-box {
+    /* border:2px dotted red ; padding: 10px; */
+    color: black;
+    margin-top: 25px;
+    text-align: center;
+    margin-left: 250px;
+}
+
+.red-text {
+    color: red;
+}
+
+
+.pop {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: bottom 0.5s ease;
+    z-index: 1000;
+}
+
+.pop.show {
+    bottom: 50px;
+}
+
+.changeColor {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: bottom 0.5s ease;
+    z-index: 1000;
+
+}
+
+.changeColor.show {
+    bottom: 50px
+}
+
+
+.imgtxtContainer {
+    border: solid;
+    border-bottom: ;
+    color: red;
+    display: flex;
+    border-color: red;
+    gap: 200px;
+    padding: 150px;
+
+}
+
+.imagebox {
+    border: solid;
+    color: white;
+    padding: 50px;
+    border-radius: 50%;
+
+
+
+}
+
+.box img {
+    width: 350px;
+    height: 400px;
+    float: left;
+    transform: translate(-250px, 10px);
+}
+
+.contentimg {
+    display: flex;
+}
+
+.c-img {
+    height: 20px;
+    width: 15px;
+
+    transform: translate(850px, 50px);
+}
+
+.cont {
+    float: right;
+    transform: translate(150px, 150px);
+}
+
+.profile-img {
+    width: 25px;
+    height: 25px;
+    transform: translate(1400px, -23px);
+    cursor: pointer;
+    transition: transform 0.15;
+}
+
+.search-img {
+    width: 25px;
+    height: 25px;
+    transform: translate(1350px, -45px);
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.white-text {
+    color: white;
+}
+
+.maincomponent {
+    height: 100%;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+
+.hero {
+    height: 620px;
+    width: 100px;
+    display: flex;
+    position: relative;
+    isolation: isolate;
+}
+
+.hero-text {
+    color: white;
+    max-width: 420px;
+
+}
+
+.hero-text h1 {
+
+    color: white;
+    transform: translate(220px, 20px);
+    font-family: 'Times New Roman';
+
+}
+
+
+/* .hero-img{
+    height: 110%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 160px;
+    top: -8%;
+} */
+
+.himg {
+    height: 400px;
+    width: 320px;
+    transform: translate(-20px, -70px);
+    opacity: 2;
+}
+
+.fillform h2 {
+    color: red;
+    text-align: center;
+}
+
+.fillform button {
+    color: red;
+    transform: translate(1100px, -40px);
+    margin-bottom: 20px;
+
+}
+
+
+.form-box {
+    width: 350px;
+    margin: 100px auto;
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.form-container button {
+    padding: 10px;
+    width: 100%;
+    background: red;
+    color: white;
+    border: none;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.product-comp {
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.product-img {
+    width: 35%;
+    text-align: right;
+    /* transform: translate(-50px,85px); */
+    margin-top: 25px;
+}
+
+
+.product-btn {
+    width: 45%;
+    align-items: center;
+    transform: translate(600px, 25px);
+    justify-content: space-between;
+    row-gap: 20px;
+
+}
+
+.enquiry-btn {
+    transform: translate(540px);
+    cursor: pointer;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+
+#cart {
+
+    display: flex;
+    height: 30px;
+    /* max-width: 100%; */
+
+}
+
+#cart img {
+    transform: translate(1450px, -74px);
+    cursor: pointer;
+}
+
+#sectioncards {
+    background-color: slategray;
+
+    p {
+        text-align: center;
+    }
+
+}

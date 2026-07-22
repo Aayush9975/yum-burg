@@ -1,0 +1,55 @@
+
+<!-- Output
+
+Agar tum 3 baar Cheese Burger aur 2 baar Chicken Burger add karte ho to cart me dikhega:
+
+Cheese Burger - Quantity: 3
+Chicken Burger - Quantity: 2
+Is project me tum ye concepts seekh jaoge:
+✅ Arrays
+✅ Objects
+✅ Functions
+✅ find()
+✅ if...else
+✅ push()
+✅ forEach()
+✅ DOM Manipulation (innerHTML)
+
+Ye beginners ke liye ek standard "Add to Cart" implementation hai.
+
+Agar tum poori burger website bana rahe ho, to agla step hoga:
+
+Price add karna (₹199 × Quantity)
+Total calculate karna
++ / − buttons se quantity change karna
+Remove item button
+Cart ko localStorage me save karna, taaki page refresh hone par bhi cart bana rahe. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="burger">
+    <h3>Cheese Burger</h3>
+    <button onclick="addToCart('Cheese Burger')">
+        Add to Cart
+    </button>
+</div>
+
+<div class="burger">
+    <h3>Chicken Burger</h3>
+    <button onclick="addToCart('Chicken Burger')">
+        Add to Cart
+    </button>
+</div>
+
+<h2>Cart</h2>
+<ul id="cart"></ul>
+<script src="test.js"></script>
+</body>
+</html>
