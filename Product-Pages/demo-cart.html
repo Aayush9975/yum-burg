@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .card { border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; width: 200px; border-radius: 8px; }
+    button { background: #ff4757; color: white; border: none; padding: 8px 12px; cursor: pointer; border-radius: 4px; }
+    #display-box { margin-top: 20px; padding: 15px; background: #eccc68; border-radius: 8px; display: none; }
+  </style>
+</head>
+<body>
+
+  <h2>Menu Card</h2>
+
+  <!-- Item 1 -->
+  <div class="card">
+    <h3>Pizza</h3>
+    <p>Price: ₹250</p>
+    <button class="menu-btn" data-item="Pizza" data-price="250">Order Pizza</button>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="card">
+    <h3>Burger</h3>
+    <p>Price: ₹120</p>
+    <button class="menu-btn" data-item="Burger" data-price="120">Order Burger</button>
+  </div>
+
+  <!-- Result dikhane ke liye -->
+  <div id="display-box"></div>
+
+  <script>
+    // 1. Saare buttons ko select kiya
+    const buttons = document.querySelectorAll('.menu-btn');
+    const displayBox = document.getElementById('display-box');
+
+    // 2. Har button par click listener lagaya
+    buttons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        
+        // e.target = Wahi button jis par aapne CLICK kiya
+        const clickedButton = e.target;
+
+        // dataset se attributes nikaale
+        const itemName = clickedButton.dataset.item;
+        const itemPrice = clickedButton.dataset.price;
+
+        // Screen par print karaya
+        displayBox.style.display = 'block';
+        displayBox.innerHTML = `Aapne <b>${itemName}</b> select kiya hai. Price: <b>₹${itemPrice}</b>`;
+        
+      });
+    });
+  </script>
+
+</body>
+</html>

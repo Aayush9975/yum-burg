@@ -55,7 +55,7 @@
 
 
             <div class="burger-card">
-                <img src="../images/yumburg-icon.jpg" alt="Cheese Burger"> 
+                <img src="../images/yumburg-icon.jpg" alt="Cheese Burger">
                 <h2>Cheese Burger</h2>
                 <p class="price">₹149</p>
                 <a href="../Product-Pages/Cheese-Burger.html" class="btn">Press Me!</a>
@@ -86,9 +86,13 @@
                 <img src="../images/yumburg-icon.jpg" alt="Brown Burger">
                 <h2>Brown Burger</h2>
                 <p class="price">₹256</p>
-                <a href="#" class="btn" onclick="comingSoon(event)">Press Me!</a>
+                <button class="add-to-cart-btn" data-id="burger-01" data-name="Classic Cheese Burger" data-price="256"
+                    data-image="/images/yumburg-icon.jpg">
+                    Buy Now
+                </button>
                 <!-- <button class="add-cart" onclick="">Add to Cart </button> -->
             </div>
+            <div id="display-box"></div>
 
             <div class="burger-card">
                 <img src="../images/yumburg-icon.jpg" alt="Veg Chili">
@@ -175,8 +179,38 @@
     </main>
 
     <div id="footer"></div>
+<script>
+document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+  button.addEventListener('click', (e) => {
+    const btn = e.target;
+    const product = {
+      id: btn.dataset.id,
+      name: btn.dataset.name,
+      price: parseFloat(btn.dataset.price),
+      image: btn.dataset.image,
+      quantity: 1
+    };
 
+    // 1. Get existing cart from localStorage or initialize empty array
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // 2. Check if product already exists
+    const existingIndex = cart.findIndex(item => item.id === product.id);
+
+    if (existingIndex > -1) {
+      cart[existingIndex].quantity += 1;
+    } else {
+      cart.push(product);
+    }
+
+    // 3. Save back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${product.name} added to cart!`);
+  });
+});
+</script>
     <script src="script.js"></script>
+    <script src="cart.js"></script>
 
 </body>
 

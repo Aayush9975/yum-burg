@@ -1,24 +1,15 @@
-// 1. Get the stored data from localStorage
-let productName = localStorage.getItem("name");
-let productPrice = localStorage.getItem("price");
-let productImage = localStorage.getItem("image");
+const buttons = document.querySelectorAll('.menu-btn');
+    const displayBox = document.getElementById('display-box');
 
-let cart = document.getElementById("cart-product");
+    buttons.forEach(btn=>{
+        btn.addEventListener('click',(e)=>{
+            const clickedbuttons = e.target;
 
-// 2. Check if the cart has items before trying to render it
-if (productName) {
-    cart.innerHTML = `
-        <img src="${productImage}" width="200" alt="${productName}">
-        <h2>${productName}</h2>
-        <h3>${productPrice}</h3>
-        <button onclick="removeCart()">Remove</button>
-    `;
-} else {
-    cart.innerHTML = `<p>Your cart is empty.</p>`;
-}
+            const itemname=clickedButton.dataset.item;
+             const itemPrice = clickedButton.dataset.price;
 
-// 3. Clear the cart and refresh
-function removeCart() {
-    localStorage.clear();
-    location.reload();
-}
+                displayBox.style.display = 'block';
+        displayBox.innerHTML = `Aapne <b>${itemName}</b> select kiya hai. Price: <b>₹${itemPrice}</b>`;
+        
+        })
+    })
