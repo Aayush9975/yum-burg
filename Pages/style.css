@@ -472,7 +472,7 @@ footer {
 }
 
 .enquiry-btn {
-    transform: translate(540px);
+    transform: translate(540px,11px);
     cursor: pointer;
     animation: blink 1s infinite;
 }
