@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome! to the YumBurg</title>
+    <link rel="stylesheet" href="/Pages/style.css">
+    <link rel="stylesheet" href="/Pages/sectioncards.css">
+    <link rel="stylesheet" href="../styles/img-slider.css">
+    <link rel="stylesheet" href="../styles/new_product_launch.css">
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome! to the YumBurg</title>
+
+    <link rel="stylesheet" href="/Pages/style.css">
+    <link rel="stylesheet" href="/Pages/sectioncards.css">
+    <link rel="stylesheet" href="../styles/img-slider.css">
+    <link rel="stylesheet" href="../styles/new_product_launch.css">
+
+
+    <!-- YUMBURG COLOR THEME -->
+    <style>
+
+        body {
+            background: #0F0F0F !important;
+            color: #ffffff;
+        }
+
+
+        /* Header */
+        .header {
+            background: #111;
+            border-bottom: 2px solid #FFC107;
+        }
+
+        .logo {
+            color:#FFC107;
+            font-weight:bold;
+        }
+
+        .nav a {
+            color:white;
+        }
+
+        .nav a:hover {
+            color:#FFC107;
+        }
+
+
+        /* Main Heading */
+        .Hello {
+            color:#FFC107;
+        }
+
+
+        /* Burger Cards */
+        .burger-card {
+            background:#1A1A1A;
+            color:white;
+            border:1px solid #333;
+            transition:.3s;
+        }
+
+
+        .burger-card:hover {
+            transform:translateY(-5px);
+            border-color:#FFC107;
+            box-shadow:0 0 20px rgba(255,193,7,.3);
+        }
+
+
+        .price {
+            color:#FFC107;
+            font-weight:bold;
+        }
+
+
+        /* Buttons */
+        .btn,
+        .add-to-cart-btn {
+
+            background:#E63946;
+            color:white;
+            border:none;
+            padding:10px 18px;
+            border-radius:20px;
+            cursor:pointer;
+
+        }
+
+
+        .btn:hover,
+        .add-to-cart-btn:hover {
+
+            background:#FFC107;
+            color:black;
+
+        }
+
+
+
+        /* Special Card Section */
+
+        #5card-component {
+
+            background:linear-gradient(
+                135deg,
+                #1A1A1A,
+                #333
+            ) !important;
+
+        }
+
+
+        .cardssliderh3 {
+
+            color:#FFC107;
+
+        }
+
+
+
+        .card {
+
+            background:#222;
+            color:white;
+
+        }
+
+
+        .card button {
+
+            background:#FFC107;
+            color:black;
+            border:none;
+            border-radius:20px;
+            padding:8px 15px;
+
+        }
+
+
+
+        /* Image Slider */
+
+        .img-slider {
+
+            background:#111;
+
+        }
+
+
+
+        /* New Product Launch */
+
+        .new_product_component {
+
+            background:#151515;
+
+        }
+
+
+        .container {
+
+            background:#1A1A1A;
+            border-radius:20px;
+
+        }
+
+
+        .right h2 {
+
+            color:#FFC107;
+
+        }
+
+
+        .description {
+
+            color:#ddd;
+
+        }
+
+
+        /* Popups */
+
+        .popup,
+        .pop,
+        .changeColor {
+
+            background:#FFC107;
+            color:black;
+
+        }
+
+
+    </style>
+
+</head>
+</head>
+
+<body bgcolor="black">
+    <div id="popup" class="popup">🚀 Coming Soon...</div>
+    <div id="pop" class="pop">🚀 Waiting Period</div>
+    <div id="changeColor" class="changeColor">Your Button Color is change</div>
+
+    <header class="header">
+        <div class="logo">YumBurg</div>
+        <nav class="nav">
+            <a href="/Pages/index.html">Home</a>
+            <a href="/Pages/about.html">About</a>
+            <a href="#">Contact</a>
+
+
+            <div class="enquiry-tab">
+                <button class="enquiry-btn" id="OpenPopupForm"
+                    onclick="window.location.href='../pages/form.html'">ENQUIRY</button>
+            </div>
+            <div class="profile-img">
+                <img src="../images/account.svg" alt="account-img">
+            </div>
+
+            <div class="search-img">
+                <img src="../images/search-b.svg" alt="search-btn">
+            </div>
+
+            <div id="cart">
+                <img src="../images/cart.jpg.png" alt="cart-img" onclick="window.location.href='cart.html'">
+            </div>
+
+
+
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="Hello">Hello Yummy's! Go Down and Enjoy IT!</h2>
+
+        <div class="card-wrapper">
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Cheese Burger">
+                <h2>Cheese Burger</h2>
+                <p class="price">₹149</p>
+                <a href="../Product-Pages/Cheese-Burger.html" class="btn">Press Me!</a>
+
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Chicken Shot">
+                <h2>Chicken Shot!</h2>
+                <p class="price">₹289</p>
+                <a href="#" class="btn" id="offer" onclick="offer()">Seee Offferrr!</a>
+                <button onclick="increase()">+</button>
+                <span id="count">0</span>
+                <button onclick="decrease()">-</button>
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="The Smoky Melt">
+                <h2>The Smoky Melt</h2>
+                <p class="price">₹256</p>
+                <a href="#" class="btn" onclick="comingSoon(event)">Press Me!</a>
+                <button onclick="increase2()">+</button>
+                <span id="count2">0</span>
+                <button onclick="decrease2()">-</button>
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Brown Burger">
+                <h2>Brown Burger</h2>
+                <p class="price">₹256</p>
+                <button class="add-to-cart-btn" data-id="burger-01" data-name="Classic Cheese Burger" data-price="256"
+                    data-image="/images/yumburg-icon.jpg">
+                    Buy Now
+                </button>
+                <!-- <button class="add-cart" onclick="">Add to Cart </button> -->
+            </div>
+            <div id="display-box"></div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Veg Chili">
+                <h2>Veg Chili</h2>
+                <p class="price">₹256</p>
+                <a href="#" class="btn" onclick="comingSoon(event)">Press Me!</a>
+            </div>
+
+            <div class="box">
+                <img src="../images/McDonalds-Transparent-PNG.png" alt="macd">
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Veg Fire">
+                <h2>Veg Fire!</h2>
+                <p class="price">₹256</p>
+                <a href="#" class="btn">Press Me!</a>
+            </div>
+
+            <div class="burger-card">
+                <img src="../images/yumburg-icon.jpg" alt="Green Burg">
+                <h2>Green Burg</h2>
+                <p class="price">₹256</p>
+                <a href="#" class="btn" onclick="WaitingPeriod(event)">Press Me!</a>
+            </div>
+
+        </div>
+
+        <section class="hero-component">
+
+            <div class="maincomponent" style="display: none;">
+                <div class="hero-text">
+                    <h1>Amazing !!</h1>
+                </div>
+
+                <div class="hero-img">
+                    <img class="himg" src="../images/McDonalds-Transparent-PNG.png" alt="macd">
+                </div>
+            </div>
+
+            <div id="5card-component" style="background-color: red; margin-top: 85px;">
+                <br>
+                <h3 class="cardssliderh3">Lets Have What Special Today is ?</h3>
+
+                <div class="cardsslider">
+
+                    <div class="card">
+                        <h2>Hot Chicken</h2>
+                        <p>Spicy</p>
+                        <button>Lets Have</button>
+                    </div><br>
+                    <div class="card">
+                        <h2>Dimsun Burger</h2>
+                        <p>Healthy Veggies</p>
+                        <button>Lets Have</button>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <h2>Sushi</h2>
+                        <p>China Great</p>
+                        <button>Lets Have</button>
+                    </div><br>
+
+                    <div class="card">
+                        <h2>Hot Spice</h2>
+                        <p>Some Different</p>
+                        <button>Lets Have</button>
+                    </div><br>
+
+                    <div class="card">
+                        <h2>Kong-Hong</h2>
+                        <p>Hong Kong Opposite</p>
+                        <button>Lets Have</button>
+                    </div><br>
+                </div>
+            </div>
+<section class="img-slider">
+   <div class="slider">
+    <img class="slide" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&h=300&fit=crop">
+    <img class="slide" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&h=300&fit=crop"  >
+    <img class="slide" src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=500&h=300&fit=crop">
+    <img class="slide" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&h=300&fit=crop">
+</div>
+
+
+<div class="dots"></div>
+</section>
+
+<section class="new_product_component">
+   <div class="container">
+        <div class="left">
+            <img class="left-slider-img" src="https://picsum.photos/id/1015/400/300" alt="demo-img">
+        </div>
+        <div class="right">
+            <h2>This is Demo H2</h2>
+            <p class="description">This is demo Description</p>
+        </div>
+    </div>
+
+</section>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+    <script>
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const btn = e.target;
+                const product = {
+                    id: btn.dataset.id,
+                    name: btn.dataset.name,
+                    price: parseFloat(btn.dataset.price),
+                    image: btn.dataset.image,
+                    quantity: 1
+                };
+
+                // 1. Get existing cart from localStorage or initialize empty array
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                // 2. Check if product already exists
+                const existingIndex = cart.findIndex(item => item.id === product.id);
+
+                if (existingIndex > -1) {
+                    cart[existingIndex].quantity += 1;
+                } else {
+                    cart.push(product);
+                }
+
+                // 3. Save back to localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert(`${product.name} added to cart!`);
+            });
+        });
+    </script>
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="cart.js"></script> -->
+    <script src="../scripts/img-slider.js"></script>
+    <script src="../scripts/new_product_launch.js"></script>
+</body>
+
+</html>
